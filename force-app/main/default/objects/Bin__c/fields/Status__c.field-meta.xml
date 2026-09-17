@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>receiving</fullName>
+                <default>false</default>
+                <label>receiving</label>
+            </value>
+            <value>
+                <fullName>putaway</fullName>
+                <default>false</default>
+                <label>putaway</label>
+            </value>
+            <value>
+                <fullName>cycle counting</fullName>
+                <default>false</default>
+                <label>cycle counting</label>
+            </value>
+            <value>
+                <fullName>replenishment</fullName>
+                <default>false</default>
+                <label>replenishment</label>
+            </value>
+            <value>
+                <fullName>picking</fullName>
+                <default>false</default>
+                <label>picking</label>
+            </value>
+            <value>
+                <fullName>packing</fullName>
+                <default>false</default>
+                <label>packing</label>
+            </value>
+            <value>
+                <fullName>shipping</fullName>
+                <default>false</default>
+                <label>shipping</label>
+            </value>
+            <value>
+                <fullName>exception handling.</fullName>
+                <default>false</default>
+                <label>exception handling.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

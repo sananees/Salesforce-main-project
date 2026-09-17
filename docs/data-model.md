@@ -1,0 +1,12 @@
+# Warehouse Management and Logistics Data Model
+
+| Entity | Purpose | Owner | Record Name | Lifecycle | Sensitive Fields | Parent | Expected Volume | Role |
+|---|---|---|---|---|---|---|---|---|
+| Warehouse | Stores information about each warehouse location. | Operations Administrator | Warehouse Name or Code | Created when opened; updated while active; marked inactive when closed. | Address and contact information | None | Low | Primary party/source record |
+| Zone | Divides a warehouse into organized storage areas. | Warehouse Manager | Zone Code | Created for a warehouse; updated as needed; marked inactive when no longer used. | None | Warehouse | Low | Supporting location record |
+| Bin | Identifies the exact storage position for inventory. | Warehouse Manager | Bin Code | Created inside a zone; updated as capacity changes; marked inactive instead of deleted. | Inventory location and capacity | Zone | Medium | Main process record |
+| Product | Stores information about goods managed by the business. | Product Manager | Product Name or SKU | Created when introduced; updated while sold; marked inactive when discontinued. | Cost and pricing information | None | Medium to High | Master data record |
+| Inventory Item | Tracks the quantity of a product stored in a specific bin. | Inventory Manager | Auto Number | Created when stock is received; updated when stock moves; archived when no longer required. | Quantity, product cost, and location | Product and Bin | High | Operational record |
+| Stock Movement | Records inventory transfers, receipts, adjustments, and removals. | Inventory Manager | Movement Number | Created for every stock transaction and retained for audit history. | Quantity, user, date, and location | Product, Source Bin, and Destination Bin | Very High | Transaction and audit record |
+| Shipment | Tracks products being shipped into or out of a warehouse. | Shipping Coordinator | Shipment Number | Created when shipping begins; updated during transit; retained after delivery. | Delivery address, tracking number, and customer information | Warehouse | High | Transaction record |
+| Carrier Event | Records tracking updates received from a carrier system. | Integration User | Event ID or Auto Number | Created by integration and retained as shipment history. | Tracking details, location, and external payload | Shipment | Very High | Integration event record |

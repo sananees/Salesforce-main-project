@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#53D0E7</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Warehouse Management and Logistics App</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>standard-Task</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>standard-File</tabs>
+    <tabs>Warehouse__c</tabs>
+    <tabs>Product__c</tabs>
+    <tabs>Zone__c</tabs>
+    <tabs>Bin__c</tabs>
+    <tabs>Inventory_Item__c</tabs>
+    <tabs>Stock_Movement__c</tabs>
+    <tabs>Warehouse_Shipment__c</tabs>
+    <tabs>Carrier_Event__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Warehouse_Management_and_Logistics_App_UtilityBar</utilityBar>
+</CustomApplication>
