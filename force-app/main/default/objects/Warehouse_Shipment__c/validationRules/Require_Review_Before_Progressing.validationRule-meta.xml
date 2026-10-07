@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Review_Before_Progressing</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+    ISBLANK(TEXT(Status__c)),
+    AND(
+        ISNEW(),
+        NOT(ISPICKVAL(Status__c, &quot;Draft&quot;))
+    ),
+    AND(
+        NOT(ISNEW()),
+        ISCHANGED(Status__c),
+        OR(
+            AND(
+                ISPICKVAL(PRIORVALUE(Status__c), &quot;Draft&quot;),
+                NOT(ISPICKVAL(Status__c, &quot;Review&quot;))
+            ),
+            AND(
+                ISPICKVAL(PRIORVALUE(Status__c), &quot;Review&quot;),
+                NOT(
+                    OR(
+                        ISPICKVAL(Status__c, &quot;Draft&quot;),
+                        ISPICKVAL(Status__c, &quot;Approved&quot;)
+                    )
+                )
+            )
+        )
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Start new shipments in Draft. Move from Draft to Review, then Approved before later stages. From Review, you may return to Draft for corrections. Status cannot be blank.</errorMessage>
+</ValidationRule>
