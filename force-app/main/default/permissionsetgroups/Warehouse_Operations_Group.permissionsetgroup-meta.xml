@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Combines the permissions required for the main warehouse operational persona.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Warehouse Operations Group</label>
+    <permissionSets>Warehouse_Associate</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>
