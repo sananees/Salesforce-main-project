@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Share_Stock_Movements_with_Inventory_Controllers</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Stock Movements with Inventory Controllers</label>
+        <sharedTo>
+            <role>Inventory_Controller</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Warehouse_Associate</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>
